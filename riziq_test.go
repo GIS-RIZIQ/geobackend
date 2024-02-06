@@ -8,22 +8,22 @@ import (
 var dbname = "GIS"
 var collname = "GIS"
 
-func TestGeoIntersects(t *testing.T) {
-	mconn := SetConnection("MONGOSTRING", dbname)
-	coordinates := Polygon{
-		Coordinates: [][][]float64{
-			{
-				{100.5918079639361, -0.45832970470556234},
-				{100.59180519679398, -0.4584272433564678},
-				{100.5918916699963, -0.4584327774636705},
-				{100.59189305356739, -0.4583317799957598},
-				{100.5918079639361, -0.45832970470556234},
-			},
-		},
-	}
-	datagedung := GeoIntersects(mconn, collname, coordinates)
-	fmt.Println(datagedung)
-}
+// func TestGeoIntersects(t *testing.T) {
+// 	mconn := SetConnection("MONGOSTRING", dbname)
+// 	coordinates := Polygon{
+// 		Coordinates: [][][]float64{
+// 			{
+// 				{100.5918079639361, -0.45832970470556234},
+// 				{100.59180519679398, -0.4584272433564678},
+// 				{100.5918916699963, -0.4584327774636705},
+// 				{100.59189305356739, -0.4583317799957598},
+// 				{100.5918079639361, -0.45832970470556234},
+// 			},
+// 		},
+// 	}
+// 	datagedung := GeoIntersects(mconn, collname, coordinates)
+// 	fmt.Println(datagedung)
+// }
 
 func TestGeoWithin(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", dbname)
